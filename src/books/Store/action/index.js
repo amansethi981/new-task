@@ -19,7 +19,7 @@ export const getData = () => {
 };
 
 
-export const getMails = params => {
+export const getDataById = params => {
   return dispatch => {
     return axios.get('https://www.googleapis.com/books/v1/volumes?filter=free-ebooks&q=a', { params }).then(res => {
       dispatch({ type: 'GET_DATA_BY_ID', data: res.data, params })
